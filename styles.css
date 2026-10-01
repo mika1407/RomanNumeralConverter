@@ -1,0 +1,230 @@
+:root {
+--bg-dark: #0f1015;
+--card-bg: #181a24;
+--gold: #d4af37;
+--gold-dark: #aa820a;
+--crimson: #991b1b;
+--text-main: #f3f4f6;
+--text-muted: #9ca3af;
+--border-gold: rgba(212, 175, 55, 0.3);
+}
+
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Inter', sans-serif;
+background: radial-gradient(circle at center, #1c1f2e 0%, var(--bg-dark) 100%);
+color: var(--text-main);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+.converter-container {
+width: 100%;
+max-width: 520px;
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+
+.converter-header {
+text-align: center;
+}
+.emblem {
+font-size: 2.5rem;
+display: block;
+margin-bottom: 8px;
+}
+
+.converter-header h1 {
+font-family: 'Cinzel', serif;
+font-size: 1.8rem;
+color: var(--gold);
+font-weight: 700;
+letter-spacing: 1px;
+}
+.subtitle {
+font-size: 0.9rem;
+color: var(--text-muted);
+margin-top: 4px;
+}
+
+.converter-card {
+background: var(--card-bg);
+border: 2px solid var(--border-gold);
+border-radius: 16px;
+padding: 32px;
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.05);
+position: relative;
+}
+.input-group {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 24px;
+}
+
+.input-group label {
+font-family: 'Cinzel', serif;
+font-size: 0.85rem;
+text-transform: uppercase;
+color: var(--gold);
+letter-spacing: 1px;
+font-weight: 600;
+}
+.input-action-row {
+display: flex;
+gap: 12px;
+}
+
+input[type="number"] {
+flex: 1;
+background: var(--bg-dark);
+border: 1px solid var(--border-gold);
+border-radius: 10px;
+padding: 14px 16px;
+color: var(--text-main);
+font-size: 1.1rem;
+outline: none;
+transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+border-color: var(--gold);
+box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+button#convert-btn {
+font-family: 'Cinzel', serif;
+background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+color: var(--bg-dark);
+font-weight: 700;
+padding: 0 24px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: transform 0.2s, filter 0.2s;
+}
+
+button#convert-btn:hover {
+filter: brightness(1.15);
+transform: translateY(-1px);
+}
+
+button#convert-btn:active {
+transform: translateY(1px);
+}
+
+/* Styling presets and quick chips */
+.presets-section {
+margin-bottom: 24px;
+}
+
+.presets-label {
+display: block;
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: var(--text-muted);
+margin-bottom: 8px;
+font-weight: 600;
+}
+
+.preset-chips {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+.preset-btn {
+background: var(--bg-dark);
+border: 1px solid var(--border-gold);
+color: var(--gold);
+font-size: 0.75rem;
+padding: 6px 10px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.2s;
+}
+
+.preset-btn:hover {
+background: rgba(212, 175, 55, 0.15);
+}
+
+.preset-btn.error-preset {
+border-color: rgba(153, 27, 27, 0.5);
+color: #fca5a5;
+}
+
+.preset-btn.error-preset:hover {
+background: rgba(153, 27, 27, 0.2);
+}
+
+.output-section {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.output-label {
+font-family: 'Cinzel', serif;
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: var(--gold);
+font-weight: 600;
+}
+
+.output-box {
+background: var(--bg-dark);
+border: 1px solid var(--border-gold);
+border-radius: 10px;
+padding: 20px;
+text-align: center;
+min-height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.3s ease;
+}
+
+.output-box.default p {
+color: var(--text-muted);
+font-style: italic;
+font-size: 1rem;
+}
+
+.output-box.success p {
+font-family: 'Cinzel', serif;
+color: var(--gold);
+font-size: 1.8rem;
+font-weight: 900;
+letter-spacing: 2px;
+}
+
+.output-box.error {
+background: rgba(153, 27, 27, 0.15);
+border-color: rgba(153, 27, 27, 0.5);
+}
+
+.output-box.error p {
+color: #fca5a5;
+font-size: 0.95rem;
+font-weight: 600;
+font-style: normal;
+}
+
+.converter-footer {
+text-align: center;
+font-size: 0.75rem;
+color: var(--text-muted);
+}

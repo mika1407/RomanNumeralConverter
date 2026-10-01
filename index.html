@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter</title>
+    <!-- Google Fonts for Classic Roman Aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter-container">
+        <header class="converter-header">
+            <span class="emblem">🏛️</span>
+            <h1>Roman Numeral Converter</h1>
+            <p class="subtitle">Convert Arabic digits to classic Roman characters</p>
+        </header>
+
+                <main class="converter-card">
+            <div class="input-group">
+                <label for="number">Enter a Number (1 - 3999):</label>
+                <div class="input-action-row">
+                    <!-- MANDATORY IDs REQUIRED BY FREECODECAMP TESTS -->
+                    <input type="number" id="number" placeholder="e.g. 2026" autocomplete="off">
+                    <button id="convert-btn">Convert</button>
+                </div>
+            </div>
+
+            <div class="presets-section">
+                <span class="presets-label">Quick Test Presets:</span>
+                <div class="preset-chips">
+                    <button class="preset-btn" data-val="9">9 (IX)</button>
+                    <button class="preset-btn" data-val="16">16 (XVI)</button>
+                    <button class="preset-btn" data-val="649">649 (DCXLIX)</button>
+                    <button class="preset-btn" data-val="1023">1023 (MXXIII)</button>
+                    <button class="preset-btn" data-val="3999">3999 (MMMCMXCIX)</button>
+                    <button class="preset-btn error-preset" data-val="-1">-1 (Test)</button>
+                    <button class="preset-btn error-preset" data-val="4000">4000 (Test)</button>
+                </div>
+            </div>
+                      <div class="output-section">
+                <span class="output-label">Result:</span>
+                <!-- MANDATORY ID REQUIRED BY FREECODECAMP TESTS -->
+                <div id="output-box" class="output-box default">
+                    <p id="output">Awaiting input...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="converter-footer">
+            <p>FreeCodeCamp Project Compliance &bull; Styled with Imperial Elegance</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
